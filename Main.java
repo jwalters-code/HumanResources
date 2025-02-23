@@ -1,26 +1,44 @@
 /*
-This code is provided to give you a
-starting place. It should be modified.
-No further imports are needed.
-To earn full credit, you must also
-answer the following questions:
+Jade Walters
+CSCI 2251
+Assignment: Human Resources
+Purpose: 
+Sources:
+*/
 
+/*
 Q1: Car and Engine are related
 by which, Inheritance or Composition?
+Composition
 
 Q2: Color and Red are related
 by which, Inheritance or Composition?
+Inheritance
 
 Q3: Shirt and Clothing are related
 by which, Inheritance or Composition?
+Inheritance
 
 Q4: Furniture and Desk are related
 by which, Inheritance or Composition?
+Inheritance
 
 Q5: CellPhone and Battery are related
 by which, Inheritance or Composition?
+Composition
 
 */
+
+/* TO DO For part 1 you need to create three classes: Person, PersonList, and PersonSet. 
+A mostly-blank Main.java has been provided, but you'll need to fill it in AND you 
+must answer the five questions at the top of the document.
+
+TO DO 5.	In the main method in Main:
+	A.	Instantiate a single Person object as a test. You can make up the data passed to the constructor.
+	B.	Instantiate a PersonSet object as a test.
+	C.	Read data in from the file hr.txt and display it on the command prompt.
+*/
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
