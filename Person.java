@@ -14,7 +14,7 @@ Sources:
 
 public class Person {
 	
-	//instance variables
+	//instance variables for name, height, weight
 	private String name;
 	private double height;
 	private double weight;
@@ -24,6 +24,13 @@ public class Person {
 		this.name = name;
 		this.height = height;
 		this.weight = weight;
+	}
+	
+	//toSring method returns Person data in database-ready format
+	@Override
+	public String toString() {
+		String personData = name + " " + height + " " + weight;
+		return personData;
 	}
 	
 }
