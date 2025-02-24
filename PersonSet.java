@@ -56,4 +56,15 @@ public class PersonSet implements PersonList {
 	public Person get(int index) {
 		return personList.get(index);
 	}
+	
+	//WILL THIS WORK OR MUST I LOOK AT EACH VARIABLE INDIVIDUALLY????
+	//method checks for duplicate in personList 
+	public boolean duplicate(Person person, ArrayList<Person> personList) {
+		for(int i=0; i<personList.size();  i++) {
+			if(person.equals(personList.get(i))) {
+				return true; //is a duplicate
+			}
+		}
+		return false; //not duplicate
+	}
 }
