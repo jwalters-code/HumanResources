@@ -32,4 +32,6 @@ public class Person {
 		String personData = name + " " + height + " " + weight;
 		return personData;
 	}
+	
+	//TODO write setters and getters
 }
