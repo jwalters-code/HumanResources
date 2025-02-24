@@ -51,9 +51,15 @@ public class Main
 		//instantiate a test Person object
 		Person testPerson = new Person("Fabio", 191, 63);
 		
-		//TO DO instantiate a test PersonSet object
-		//PersonSet testPersonSet = new PersonSet(
+		//print to test
+		//System.out.println(testPerson);
 		
+		//TO DO instantiate a test PersonSet object
+		PersonSet testPersonSet = new PersonSet();
+		
+		//print to test
+		//testPersonSet.add(testPerson);
+		//System.out.println(testPersonSet.get(0));
 		
 		System.out.println();
 		

@@ -42,32 +42,36 @@ import java.util.ArrayList;
 public class PersonSet implements PersonList {
 	
 	//create Person ArrayList
-	ArrayList<Person> personList = new ArrayList<Person>();
+	ArrayList<Person> personSet = new ArrayList<Person>();
 	
 	//add method takes Person as input and returns void
 	@Override
 	public void add(Person person) {
 		
 		//check for duplicate entry
-		if(!duplicate(person, personList)) {
+		if(!duplicate(person, personSet)) {
 			
-			//add person to personList
-			personList.add(person);
+			//add person to personSet
+			personSet.add(person);
 		}
 	}
 	
 	//get method takes an int as input and returns Person at that index
 	@Override
 	public Person get(int index) {
-		return personList.get(index);
+		return personSet.get(index);
 	}
 	
 	//WILL THIS WORK OR MUST I LOOK AT EACH VARIABLE INDIVIDUALLY????
 	//method checks for duplicate in personList 
-	public boolean duplicate(Person person, ArrayList<Person> personList) {
-		for(int i=0; i<personList.size();  i++) {
-			if(person.equals(personList.get(i))) {
-				return true; //is a duplicate
+	public boolean duplicate(Person person, ArrayList<Person> personSet) {
+		if(personSet == null) {
+			return false;
+		} else {
+			for(int i=0; i<personSet.size();  i++) {
+				if(person.equals(personSet.get(i))) {
+					return true; //is a duplicate
+				}
 			}
 		}
 		return false; //not duplicate
