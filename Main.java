@@ -29,7 +29,7 @@ Composition
 
 */
 
-/* TO DO For part 1 you need to create three classes: Person, PersonList, and PersonSet. 
+/* For part 1 you need to create three classes: Person, PersonList, and PersonSet. 
 A mostly-blank Main.java has been provided, but you'll need to fill it in AND you 
 must answer the five questions at the top of the document.
 
@@ -48,10 +48,16 @@ public class Main
 {
 	public static void main(String[] args) 
 	{
+		//instantiate a test Person object
+		Person testPerson = new Person("Fabio", 191, 63);
+		
+		//TO DO instantiate a test PersonSet object
+		//PersonSet testPersonSet = new PersonSet(
+		
 		
 		System.out.println();
 		
-		/*
+		/* TO DO
 		// Don't overcomplicate the data
 		// reading. After skipping the
 		// first row, you can use the 

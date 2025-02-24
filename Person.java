@@ -32,6 +32,34 @@ public class Person {
 		String personData = name + " " + height + " " + weight;
 		return personData;
 	}
+		
+	//setter for name
+	public void setName(String name) {
+		this.name = name;
+	}
 	
-	//TODO write setters and getters
+	//getter for name
+	public String getName() {
+		return this.name;
+	}
+	
+	//setter for height
+	public void setHeight(double height) {
+		this.height = height;
+	}
+	
+	//getter for height
+	public double getHeight() {
+		return this.height;
+	}
+	
+	//setter for weight
+	public void setWeight(double weight) {
+		this.weight = weight;
+	}
+	
+	//getter for weight
+	public double getWeight() {
+		return this.weight;
+	}
 }

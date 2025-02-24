@@ -47,8 +47,13 @@ public class PersonSet implements PersonList {
 	//add method takes Person as input and returns void
 	@Override
 	public void add(Person person) {
-		//add person to personList
-		personList.add(person);
+		
+		//check for duplicate entry
+		if(!duplicate(person, personList)) {
+			
+			//add person to personList
+			personList.add(person);
+		}
 	}
 	
 	//get method takes an int as input and returns Person at that index
