@@ -2,39 +2,15 @@
 Jade Walters
 CSCI 2251
 Assignment: Human Resources
-Purpose: 
-Sources:
-*/
-
-/*
-	Write a class named, PersonSet, that implements the interface PersonList. Use an ArrayList and fill in the 
-	add and get methods. You may not use any built in Set-type Java classes.
-	
-TO DO	In addition to implementing add and get methods, PersonSet must make sure that no duplicate Persons are added. 
-	If you want to use the ArrayList’s built-in contains method to make this easier, you will need to add an equals 
-	method to Person. See below for more details.
-	
-	If you want to use the ArrayList's contains method to see if a Person is already in the set, then you 
-need to make sure that Person overrides the default equals method. To do so, fill in the following comment
-outline and also refer to this resource for more information:
-https://www.geeksforgeeks.org/overriding-equals-method-in-java/
-//Equals method outline
-@Override
-public boolean equals(Object o)
-{
-	//if Object o is null then return false
-
-	//if Object o == this then return true
-
-	//if Object o is not an instance of Person then return false
-
-//Declare a new variable of type Person (perhaps named p) 
-//	and assign it to Object o cast as type Person
-
-//if Person p has the same name, height, and weight as 
-//	this then return true
-//else return false
-}
+Purpose: to practice creating classes and using inheritence
+Sources: I referenced some of my past assignments such as 
+HurricaneRowData and TicTacToe
+--I watched a Coding with John tutorial about interfaces and abstract class
+source: https://www.youtube.com/watch?v=HvPlEJ3LHgE
+--I looked at a GeeksforGeeks page for help on parseDouble method
+source: https://www.geeksforgeeks.org/convert-string-to-double-in-java/
+--I got help on the toString method for array lists from PrepInsta
+source: https://prepinsta.com/java/arraylist-tostring-method/
 */
 
 import java.util.ArrayList;
@@ -62,14 +38,22 @@ public class PersonSet implements PersonList {
 		return personSet.get(index);
 	}
 	
-	//WILL THIS WORK OR MUST I LOOK AT EACH VARIABLE INDIVIDUALLY????
 	//method checks for duplicate in personList 
+	//sources:
+	//https://www.geeksforgeeks.org/convert-string-to-double-in-java/
+	//https://prepinsta.com/java/arraylist-tostring-method/
 	public boolean duplicate(Person person, ArrayList<Person> personSet) {
 		if(personSet == null) {
-			return false;
+			return false; //empty array
 		} else {
 			for(int i=0; i<personSet.size();  i++) {
-				if(person.equals(personSet.get(i))) {
+				String tempStr = personSet.get(i).toString();
+				String[] tempArr = tempStr.split(" ");
+				double heightDoub = Double.parseDouble(tempArr[1]);
+				double weightDoub = Double.parseDouble(tempArr[2]);
+				if(tempArr[0].equals(person.getName()) 
+					&& heightDoub == person.getHeight() 
+					&& weightDoub == person.getWeight()) {
 					return true; //is a duplicate
 				}
 			}

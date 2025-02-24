@@ -2,8 +2,15 @@
 Jade Walters
 CSCI 2251
 Assignment: Human Resources
-Purpose: 
-Sources:
+Purpose: to practice creating classes and using inheritence
+Sources: I referenced some of my past assignments such as 
+HurricaneRowData and TicTacToe
+--I watched a Coding with John tutorial about interfaces and abstract class
+source: https://www.youtube.com/watch?v=HvPlEJ3LHgE
+--I looked at a GeeksforGeeks page for help on parseDouble method
+source: https://www.geeksforgeeks.org/convert-string-to-double-in-java/
+--I got help on the toString method for array lists from PrepInsta
+source: https://prepinsta.com/java/arraylist-tostring-method/
 */
 
 /*
@@ -26,17 +33,6 @@ Inheritance
 Q5: CellPhone and Battery are related
 by which, Inheritance or Composition?
 Composition
-
-*/
-
-/* For part 1 you need to create three classes: Person, PersonList, and PersonSet. 
-A mostly-blank Main.java has been provided, but you'll need to fill it in AND you 
-must answer the five questions at the top of the document.
-
-TO DO 5.	In the main method in Main:
-	A.	Instantiate a single Person object as a test. You can make up the data passed to the constructor.
-	B.	Instantiate a PersonSet object as a test.
-	C.	Read data in from the file hr.txt and display it on the command prompt.
 */
 
 import java.io.File;
@@ -51,32 +47,58 @@ public class Main
 		//instantiate a test Person object
 		Person testPerson = new Person("Fabio", 191, 63);
 		
-		//print to test
-		//System.out.println(testPerson);
+		/*
+		//test code, check if duplicates are excluded
+		Person testPerson2 = new Person("Fabio", 191, 63);
+		Person testPerson3 = new Person("notFabio", 191, 63);
+		/*
 		
-		//TO DO instantiate a test PersonSet object
-		PersonSet testPersonSet = new PersonSet();
-		
-		//print to test
-		//testPersonSet.add(testPerson);
-		//System.out.println(testPersonSet.get(0));
-		
-		System.out.println();
-		
-		/* TO DO
-		// Don't overcomplicate the data
-		// reading. After skipping the
-		// first row, you can use the 
-		// following to read a row of
-		// character info, assuming your
-		// Scanner is named "fileReader"
-		String name = fileReader.next();
-		double height = fileReader.nextDouble();
-		double weight = fileReader.nextDouble();
+		/*
+		//test code, print testPerson
+		System.out.println(testPerson);
 		*/
 		
+		//instantiate a test PersonSet object
+		PersonSet testPersonSet = new PersonSet();
 		
+		/*
+		//test code, add test persons and print
+		testPersonSet.add(testPerson);
+		testPersonSet.add(testPerson2); //duplicate, shouldn't add
+		testPersonSet.add(testPerson3);
 		
+		System.out.println(testPersonSet.get(0));
+		System.out.println(testPersonSet.get(1));
+		*/
+		
+		System.out.println(); //blank line for readability
+		
+		try {
+			
+			//read in from file
+			File hrData = new File(args[0]);
+			Scanner fileReader = new Scanner(hrData);
+			
+			//strip first line, headers
+			fileReader.nextLine();
+			
+			while(fileReader.hasNext()) {
+				//teacher provided code
+				//copy to variables
+				String name = fileReader.next();
+				double height = fileReader.nextDouble();
+				double weight = fileReader.nextDouble();
+				
+				//print
+				System.out.println(name + " " + height + " " + weight);
+			}
+			
+		}
+		catch(IOException|ArrayIndexOutOfBoundsException e) {
+			System.out.println("Enter a valid file");
+			System.exit(1);
+		}
+	
 		/*try
 		{	
 			FileWriter fileWriterOrder = new FileWriter("outputfile.txt");

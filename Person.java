@@ -2,14 +2,15 @@
 Jade Walters
 CSCI 2251
 Assignment: Human Resources
-Purpose: 
-Sources:
-*/
-
-/*Write a class named Person. 
-	This will be a very basic class with three attributes for storing name, 
-	height, and weight information. This class should also have a toString method that 
-	returns the Person data in a database-ready String format.
+Purpose: to practice creating classes and using inheritence
+Sources: I referenced some of my past assignments such as 
+HurricaneRowData and TicTacToe
+--I watched a Coding with John tutorial about interfaces and abstract class
+source: https://www.youtube.com/watch?v=HvPlEJ3LHgE
+--I looked at a GeeksforGeeks page for help on parseDouble method
+source: https://www.geeksforgeeks.org/convert-string-to-double-in-java/
+--I got help on the toString method for array lists from PrepInsta
+source: https://prepinsta.com/java/arraylist-tostring-method/
 */
 
 public class Person {
@@ -27,6 +28,7 @@ public class Person {
 	}
 	
 	//toSring method returns Person data in database-ready format
+	//will split on white space
 	@Override
 	public String toString() {
 		String personData = name + " " + height + " " + weight;
