@@ -7,7 +7,7 @@ Sources:
 */
 
 /*
-TO DO	Write a class named, PersonSet, that implements the interface PersonList. Use an ArrayList and fill in the 
+	Write a class named, PersonSet, that implements the interface PersonList. Use an ArrayList and fill in the 
 	add and get methods. You may not use any built in Set-type Java classes.
 	
 TO DO	In addition to implementing add and get methods, PersonSet must make sure that no duplicate Persons are added. 
@@ -36,3 +36,24 @@ public boolean equals(Object o)
 //else return false
 }
 */
+
+import java.util.ArrayList;
+
+public class PersonSet implements PersonList {
+	
+	//create Person ArrayList
+	ArrayList<Person> personList = new ArrayList<Person>();
+	
+	//add method takes Person as input and returns void
+	@Override
+	public void add(Person person) {
+		//add person to personList
+		personList.add(person);
+	}
+	
+	//get method takes an int as input and returns Person at that index
+	@Override
+	public Person get(int index) {
+		return personList.get(index);
+	}
+}

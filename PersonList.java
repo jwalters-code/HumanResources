@@ -18,7 +18,6 @@ public interface PersonList {
 	//add method takes Person as input and returns void
 	public abstract void add(Person person);
 	
-	//TO DO finish method with return 
 	//get method takes an int as input and returns Person at that index
 	public abstract Person get(int index);
 }
