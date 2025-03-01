@@ -13,7 +13,17 @@ source: https://www.geeksforgeeks.org/convert-string-to-double-in-java/
 source: https://prepinsta.com/java/arraylist-tostring-method/
 */
 
+/*
+TODO	Write a class named, PersonImperialSet. This class should extend PersonSet and override the add method to 
+convert the height measurement from centimeters to inches and the weight from kilograms to pounds. (Look up the
+ conversions online.)
+ */
+ 
+ /*
+ TODO You must use super.add(p) as the final step in PersonImperialSet.add after the conversion has been completed. (Assuming that 
+p is a variable referring to a Person object to be added to the set.)
+*/
 
-public class PersonImperialSet extends PersonSet (
+public class PersonImperialSet extends PersonSet {
 
 }

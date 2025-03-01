@@ -13,6 +13,16 @@ source: https://www.geeksforgeeks.org/convert-string-to-double-in-java/
 source: https://prepinsta.com/java/arraylist-tostring-method/
 */
 
+/*
+TODO Add a toString method to PersonSet that loops through the ArrayList, concatenating 
+the Persons data to a String variable, which is then returned. The format needs to match the format of hr.txt.
+*/
+
+/*
+TODO Neither PersonOrderedSet nor PersonImperialSet should contain duplicate data, but the code that takes care of such things 
+should be implemented in the add method of PersonSet.
+*/
+
 import java.util.ArrayList;
 
 public class PersonSet implements PersonList {
