@@ -27,12 +27,16 @@ public class Person {
 		this.weight = weight;
 	}
 	
+	/*
+	Use String.format for toString method
+	*/
+	
 	//toSring method returns Person data in database-ready format
-	//will split on white space
 	@Override
 	public String toString() {
-		String personData = name + " " + height + " " + weight;
-		return personData;
+		//String personData = name + " " + height + " " + weight;
+		//return personData;
+		return String.format("%10s %10d %10d\n", name, height, weight);
 	}
 		
 	//setter for name
