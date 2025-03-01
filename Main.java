@@ -11,6 +11,8 @@ source: https://www.youtube.com/watch?v=HvPlEJ3LHgE
 source: https://www.geeksforgeeks.org/convert-string-to-double-in-java/
 --I got help on the toString method for array lists from PrepInsta
 source: https://prepinsta.com/java/arraylist-tostring-method/
+--I got help with string.concat from GeeksforGeeks
+source: https://www.geeksforgeeks.org/java-string-concat-examples/
 */
 
 /*
@@ -84,21 +86,20 @@ public class Main
 		//instantiate a test Person object
 		Person testPerson = new Person("Fabio", 191, 63);
 		
-		/*
+		
 		//test code, check if duplicates are excluded
 		Person testPerson2 = new Person("Fabio", 191, 63);
 		Person testPerson3 = new Person("notFabio", 191, 63);
-		/*
 		
-		/*
+		
 		//test code, print testPerson
 		System.out.println(testPerson);
-		*/
+		
 		
 		//instantiate a test PersonSet object
 		PersonSet testPersonSet = new PersonSet();
 		
-		/*
+		
 		//test code, add test persons and print
 		testPersonSet.add(testPerson);
 		testPersonSet.add(testPerson2); //duplicate, shouldn't add
@@ -106,9 +107,13 @@ public class Main
 		
 		System.out.println(testPersonSet.get(0));
 		System.out.println(testPersonSet.get(1));
-		*/
+		
 		
 		System.out.println(); //blank line for readability
+		
+		//test code, check PersonSet toString method
+		System.out.println(testPersonSet.toString());
+		
 		
 		try {
 			
@@ -148,5 +153,6 @@ public class Main
 			System.out.println(e);
 			System.exit(1);
 		}*/
+	
 	}
 }

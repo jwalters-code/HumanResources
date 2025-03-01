@@ -16,7 +16,7 @@ source: https://prepinsta.com/java/arraylist-tostring-method/
 //2 TODOs
 
 /*
-TODO Neither PersonOrderedSet nor PersonImperialSet should contain duplicate data, but the code that takes care of such things 
+DONE Neither PersonOrderedSet nor PersonImperialSet should contain duplicate data, but the code that takes care of such things 
 should be implemented in the add method of PersonSet.
 */
 
@@ -69,29 +69,27 @@ public class PersonSet implements PersonList {
 	}
 	
 	/*
-	Add a toString method to PersonSet that loops through the ArrayList, concatenating 
+	TODO Add a toString method to PersonSet that loops through the ArrayList, concatenating 
 	the Persons data to a String variable, which is then returned. The format needs to match the format of hr.txt.
 	--Name, left justified, 8 spaces total
 	--Height (cm), left justified, 15 spaces total
 	--Weight (kg), right justified, 15 spaces total
 	*/
 	
-	//toString method returns a string variable containing 
-	//formatted personSet array data
+	//toString method returns a string variable containing formatted personSet array data
 	@Override
 	public String toString() {
 		
 		//create String variable, add headers
-		String personSetStr = String.format
-			("%-8s %-15s %15s", "Name", "Height (cm)", "Weight (kg)");
+		String personSetStr = String.format("%-8s %-15s %15s\n", "Name", "Height (cm)", "Weight (kg)");
 		
 		//add personSet array info to personSetStr
 		for(int i=0; i<personSet.size(); i++) {
-			personSetStr.concat(String.format
-				("%-8s %-15d %15d", 
-				personSet.get(i).getName(), 
-				personSet.get(i).getHeight(), 
-				personSet.get(i).getWeight()));
+			personSetStr = personSetStr.concat(String.format
+			("%-8s %-15.0f %15.0f\n", 
+			personSet.get(i).getName(), 
+			personSet.get(i).getHeight(),
+			personSet.get(i).getWeight()));
 		}
 		
 		//return personSetStr

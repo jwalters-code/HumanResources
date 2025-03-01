@@ -27,10 +27,15 @@ public class Person {
 		this.weight = weight;
 	}
 	
+	/*
+	TODO Use String.format for toString method
+	*/
+	
 	//toSring method returns Person data in database-ready format
 	@Override
 	public String toString() {
-		return String.format("%10s %10d %10d\n", name, height, weight);
+		String personData = String.format("%s %.0f %.0f", name, height, weight);
+		return personData;
 	}
 		
 	//setter for name
