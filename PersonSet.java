@@ -69,7 +69,7 @@ public class PersonSet implements PersonList {
 	}
 	
 	/*
-	TODO Add a toString method to PersonSet that loops through the ArrayList, concatenating 
+	DONE Add a toString method to PersonSet that loops through the ArrayList, concatenating 
 	the Persons data to a String variable, which is then returned. The format needs to match the format of hr.txt.
 	--Name, left justified, 8 spaces total
 	--Height (cm), left justified, 15 spaces total
@@ -83,6 +83,7 @@ public class PersonSet implements PersonList {
 		//create String variable, add headers
 		String personSetStr = String.format("%-8s %-15s %15s\n", "Name", "Height (cm)", "Weight (kg)");
 		
+		//Source: https://www.geeksforgeeks.org/java-string-concat-examples/
 		//add personSet array info to personSetStr
 		for(int i=0; i<personSet.size(); i++) {
 			personSetStr = personSetStr.concat(String.format

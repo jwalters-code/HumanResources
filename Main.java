@@ -13,6 +13,9 @@ source: https://www.geeksforgeeks.org/convert-string-to-double-in-java/
 source: https://prepinsta.com/java/arraylist-tostring-method/
 --I got help with string.concat from GeeksforGeeks
 source: https://www.geeksforgeeks.org/java-string-concat-examples/
+--Found formula for converting cm to inches and kg to pounds on WikiHow
+source: https://www.wikihow.com/Convert-Centimeters-to-Inches
+source: https://www.wikihow.com/Convert-Kilograms-to-Pounds
 */
 
 /*

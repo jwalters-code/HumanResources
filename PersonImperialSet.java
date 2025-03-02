@@ -14,16 +14,32 @@ source: https://prepinsta.com/java/arraylist-tostring-method/
 */
 
 /*
-TODO	Write a class named, PersonImperialSet. This class should extend PersonSet and override the add method to 
+DONE	Write a class named, PersonImperialSet. This class should extend PersonSet and override the add method to 
 convert the height measurement from centimeters to inches and the weight from kilograms to pounds. (Look up the
  conversions online.)
  */
  
  /*
- TODO You must use super.add(p) as the final step in PersonImperialSet.add after the conversion has been completed. (Assuming that 
+ DONE You must use super.add(p) as the final step in PersonImperialSet.add after the conversion has been completed. (Assuming that 
 p is a variable referring to a Person object to be added to the set.)
 */
 
 public class PersonImperialSet extends PersonSet {
+	
+	@Override
+	public void add(Person person) {
+		
+		//check for duplicate entry
+		if(!duplicate(person, personSet)) {
+			
+			//create new person object, convert height cm to inches & weight kg to pounds
+			//source: https://www.wikihow.com/Convert-Centimeters-to-Inches
+			//source: https://www.wikihow.com/Convert-Kilograms-to-Pounds
+			Person imperialPerson = new Person(person.getName(), person.getHeight() * 0.394, person.getWeight() * 2.2);
+			
+			//add imperialPerson to imperialPersonSet
+			super.add(imperialPerson);
+		}
+	}
 
 }

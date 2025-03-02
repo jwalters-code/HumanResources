@@ -28,7 +28,7 @@ public class Person {
 	}
 	
 	/*
-	TODO Use String.format for toString method
+	DONE Use String.format for toString method
 	*/
 	
 	//toSring method returns Person data in database-ready format
