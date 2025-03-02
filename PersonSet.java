@@ -80,8 +80,8 @@ public class PersonSet implements PersonList {
 	@Override
 	public String toString() {
 		
-		//create String variable, add headers
-		String personSetStr = String.format("%-8s %-15s %15s\n", "Name", "Height (cm)", "Weight (kg)");
+		//create String variable
+		String personSetStr = "";
 		
 		//Source: https://www.geeksforgeeks.org/java-string-concat-examples/
 		//add personSet array info to personSetStr

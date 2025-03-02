@@ -28,17 +28,22 @@ public class PersonImperialSet extends PersonSet {
 	
 	@Override
 	public void add(Person person) {
+	
+		/* create new person object, convert height cm to inches & weight kg to pounds
+		 * source: https://www.wikihow.com/Convert-Centimeters-to-Inches
+		 * source: https://www.wikihow.com/Convert-Kilograms-to-Pounds */
+		Person imperialPerson = new Person(person.getName(), person.getHeight()*0.394, person.getWeight()*2.2);
 		
-		//check for duplicate entry
-		if(!duplicate(person, personSet)) {//DO I NEED THIS OR WOULD IT BE COVERED BY SUPER>ADD?????????????
-			
-			/* create new person object, convert height cm to inches & weight kg to pounds
-			 * source: https://www.wikihow.com/Convert-Centimeters-to-Inches
-			 * source: https://www.wikihow.com/Convert-Kilograms-to-Pounds */
-			Person imperialPerson = new Person(person.getName(), person.getHeight() * 0.394, person.getWeight() * 2.2);
-			
-			//add imperialPerson to imperialPersonSet
-			super.add(imperialPerson);
-		}
+		//HELP! I can't figure out why this is not filtering out duplicates
+		//add imperialPerson to personSet
+		super.add(imperialPerson);
+	}
+	
+	//toString method returns formatted array data with column headers
+	@Override
+	public String toString() {
+		String imperialString = String.format("%-8s %-15s %15s\n", "Name", "Height (in)", "Weight (lbs)");
+		imperialString = imperialString + super.toString();
+		return imperialString;
 	}
 }

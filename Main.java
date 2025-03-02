@@ -23,15 +23,13 @@ Instructions for Part 2
 You need to write two new classes for part 2: PersonImperialSet and PersonOrderedSet.
 */
 
-/* 
-
 /*		
-TODO 	I recommend adding methods to the classes to get the data in a text format for writing to file. You should think 
+DONE??? USING PERSONSET toString 	I recommend adding methods to the classes to get the data in a text format for writing to file. You should think 
 about which class is most appropriate for this method (or methods) to be implemented in order to reduce code duplication.
 */
 
 /*
-TODO	Output the formatted data with header to two separate files named: hr_imperial_set_output.txt and hr_ordered_set_output.txt
+DONE	Output the formatted data with header to two separate files named: hr_imperial_set_output.txt and hr_ordered_set_output.txt
 */
 
 /*
@@ -118,7 +116,7 @@ public class Main
 
 		DONE instantiate a PersonOrderedSet and a PersonImperialSet, instead of the PersonSet.
 		
-		TODO Read in the data from the file, use it to populate both set objects with Persons, and then write out the data 
+		DONE Read in the data from the file, use it to populate both set objects with Persons, and then write out the data 
 		into two separate output files (one ordered and one imperial).
 		*/
 		
@@ -158,11 +156,11 @@ public class Main
 			System.exit(1);
 		}
 	
-	
+		
 		//write orderedSet to file
 		try
 		{	
-			FileWriter fileWriterOrder = new FileWriter("HROrderedData.txt");
+			FileWriter fileWriterOrder = new FileWriter("hr_ordered_set_output.txt");
 			fileWriterOrder.write(orderedSet.toString());
 			fileWriterOrder.close(); //close fileWriter
 		}
@@ -173,10 +171,11 @@ public class Main
 			System.exit(1);
 		}
 		
+		
 		//write imperialSet to file
 		try
 		{	
-			FileWriter fileWriterImperial = new FileWriter("HRImperialData.txt");
+			FileWriter fileWriterImperial = new FileWriter("hr_imperial_set_output.txt");
 			fileWriterImperial.write(imperialSet.toString());
 			fileWriterImperial.close(); //close fileWriter
 		}
