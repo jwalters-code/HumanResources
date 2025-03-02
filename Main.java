@@ -134,7 +134,7 @@ public class Main
 			fileReader.nextLine();
 			
 			while(fileReader.hasNext()) {
-				//teacher provided code
+				
 				//copy to variables
 				String name = fileReader.next();
 				double height = fileReader.nextDouble();
@@ -186,6 +186,12 @@ public class Main
 			System.out.println(e);
 			System.exit(2);
 		}
+		
+		//print orderedSet
+		System.out.println(orderedSet.toString());
+		
+		//print imperialSet
+		System.out.println(imperialSet.toString());
 
 	}
 }
