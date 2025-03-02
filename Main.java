@@ -24,13 +24,6 @@ You need to write two new classes for part 2: PersonImperialSet and PersonOrdere
 */
 
 /* 
-TODO	Modify Main to 
-
-		TODO instantiate a PersonOrderedSet and a PersonImperialSet, instead of the PersonSet.
-		
-		TODO Read in the data from the file, use it to populate both set objects with Persons, and then write out the data 
-		into two separate output files (one ordered and one imperial).
-*/
 
 /*		
 TODO 	I recommend adding methods to the classes to get the data in a text format for writing to file. You should think 
@@ -86,7 +79,9 @@ public class Main
 {
 	public static void main(String[] args) 
 	{
-		//instantiate a test Person object
+		
+		/*
+		//test code, instantiate a test Person object
 		Person testPerson = new Person("Fabio", 191, 63);
 		
 		
@@ -116,7 +111,20 @@ public class Main
 		
 		//test code, check PersonSet toString method
 		System.out.println(testPersonSet.toString());
+		*/
 		
+		/*
+		TODO	Modify Main to 
+
+		DONE instantiate a PersonOrderedSet and a PersonImperialSet, instead of the PersonSet.
+		
+		TODO Read in the data from the file, use it to populate both set objects with Persons, and then write out the data 
+		into two separate output files (one ordered and one imperial).
+		*/
+		
+		//instantiate a PersonOrderedSet and a PersonImperialSet
+		PersonOrderedSet orderedSet = new PersonOrderedSet();
+		PersonImperialSet imperialSet = new PersonImperialSet();
 		
 		try {
 			
@@ -134,8 +142,14 @@ public class Main
 				double height = fileReader.nextDouble();
 				double weight = fileReader.nextDouble();
 				
-				//print
-				System.out.println(name + " " + height + " " + weight);
+				//create a tempPerson object 
+				Person tempPerson = new Person(name, height, weight);
+				
+				//add tempPerson to orderedSet
+				orderedSet.add(tempPerson);
+				
+				//add tempPerson to PersonImperialSet
+				imperialSet.add(tempPerson);
 			}
 			
 		}
@@ -144,7 +158,10 @@ public class Main
 			System.exit(1);
 		}
 	
-		/*try
+	
+		//write orderedSet and imperialSet to files
+		//modified teacher provided code
+		try
 		{	
 			FileWriter fileWriterOrder = new FileWriter("outputfile.txt");
 			fileWriterOrder.write("testing");

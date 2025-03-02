@@ -30,16 +30,15 @@ public class PersonImperialSet extends PersonSet {
 	public void add(Person person) {
 		
 		//check for duplicate entry
-		if(!duplicate(person, personSet)) {
+		if(!duplicate(person, personSet)) {//DO I NEED THIS OR WOULD IT BE COVERED BY SUPER>ADD?????????????
 			
-			//create new person object, convert height cm to inches & weight kg to pounds
-			//source: https://www.wikihow.com/Convert-Centimeters-to-Inches
-			//source: https://www.wikihow.com/Convert-Kilograms-to-Pounds
+			/* create new person object, convert height cm to inches & weight kg to pounds
+			 * source: https://www.wikihow.com/Convert-Centimeters-to-Inches
+			 * source: https://www.wikihow.com/Convert-Kilograms-to-Pounds */
 			Person imperialPerson = new Person(person.getName(), person.getHeight() * 0.394, person.getWeight() * 2.2);
 			
 			//add imperialPerson to imperialPersonSet
 			super.add(imperialPerson);
 		}
 	}
-
 }

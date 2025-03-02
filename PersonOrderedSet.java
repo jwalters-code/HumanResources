@@ -27,6 +27,14 @@ You may also look up and modify a bubblesort or other sorting technique for solv
 
 public class PersonOrderedSet extends PersonSet {
 	
-	
-
+	@Override
+	public void add(Person person) { 
+		
+		//add person to personSet
+		super.add(person);
+		
+		//sort into alphabetical order
+		
+		
+	}
 }
