@@ -159,20 +159,33 @@ public class Main
 		}
 	
 	
-		//write orderedSet and imperialSet to files
-		//modified teacher provided code
+		//write orderedSet to file
 		try
 		{	
-			FileWriter fileWriterOrder = new FileWriter("outputfile.txt");
-			fileWriterOrder.write("testing");
-			fileWriterOrder.close();
+			FileWriter fileWriterOrder = new FileWriter("HROrderedData.txt");
+			fileWriterOrder.write(orderedSet.toString());
+			fileWriterOrder.close(); //close fileWriter
 		}
 		catch(IOException e)
 		{
 			e.printStackTrace();
 			System.out.println(e);
 			System.exit(1);
-		}*/
-	
+		}
+		
+		//write imperialSet to file
+		try
+		{	
+			FileWriter fileWriterImperial = new FileWriter("HRImperialData.txt");
+			fileWriterImperial.write(imperialSet.toString());
+			fileWriterImperial.close(); //close fileWriter
+		}
+		catch(IOException e)
+		{
+			e.printStackTrace();
+			System.out.println(e);
+			System.exit(2);
+		}
+
 	}
 }
