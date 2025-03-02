@@ -140,14 +140,15 @@ public class Main
 				double height = fileReader.nextDouble();
 				double weight = fileReader.nextDouble();
 				
-				//create a tempPerson object 
-				Person tempPerson = new Person(name, height, weight);
+				//create a tempPerson objects
+				Person tempPersonO = new Person(name, height, weight);
+				Person tempPersonI = new Person(name, height, weight);
 				
 				//add tempPerson to orderedSet
-				orderedSet.add(tempPerson);
+				orderedSet.add(tempPersonO);
 				
 				//add tempPerson to PersonImperialSet
-				imperialSet.add(tempPerson);
+				imperialSet.add(tempPersonI);
 			}
 			
 		}
