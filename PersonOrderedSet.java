@@ -38,17 +38,12 @@ public class PersonOrderedSet extends PersonSet {
 		
 	}
 	
-	@Override
-	public String toString() {
-		return super.toString();
-	}
-	
 	//toString method returns formatted array data with column headers
 	@Override
 	public String toString() {
-		String imperialString = String.format("%-8s %-15s %15s\n", "Name", "Height (cm)", "Weight (kg)");
-		imperialString = imperialString + super.toString();
-		return imperialString;
+		String orderedString = String.format("%-8s %-15s %15s\n", "Name", "Height (cm)", "Weight (kg)");
+		orderedString = orderedString + super.toString();
+		return orderedString;
 	}
 }
 
