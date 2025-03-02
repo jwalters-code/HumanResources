@@ -24,7 +24,7 @@ You need to write two new classes for part 2: PersonImperialSet and PersonOrdere
 */
 
 /*		
-DONE??? USING PERSONSET toString 	I recommend adding methods to the classes to get the data in a text format for writing to file. You should think 
+DONE	I recommend adding methods to the classes to get the data in a text format for writing to file. You should think 
 about which class is most appropriate for this method (or methods) to be implemented in order to reduce code duplication.
 */
 
@@ -38,7 +38,7 @@ columns (this nice formatting should already be in use if you wrote your toStrin
 */
 
 /*
-TODO Objects are passed by reference, not by value. If you add the same Person to PersonOrderedSet and PersonImperialSet you will 
+TODO THIS! Objects are passed by reference, not by value. If you add the same Person to PersonOrderedSet and PersonImperialSet you will 
 see that the units get changed from metric to imperial in both. This is NOT what you want. One solution to this problem is to 
 instantiate two new Person objects and pass the same name, height, weight info to each, and then pass one to the imperial set 
 and the other to the ordered set. Another solution is to overload the Person constructor so that you can pass a Person type 
