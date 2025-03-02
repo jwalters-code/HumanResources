@@ -51,11 +51,35 @@ public class PersonSet implements PersonList {
 	//https://prepinsta.com/java/arraylist-tostring-method/
 	public boolean duplicate(Person person, ArrayList<Person> personSet) {
 		if(personSet == null) {
+			
+			//test code
+			System.out.println("null");
 			return false; //empty array
 		} else {
 			for(int i=0; i<personSet.size();  i++) {
 				String tempStr = personSet.get(i).toString();
+				
+				/*
+				//test code, print tempStr for analysis
+				System.out.println("tempStr: " + tempStr);
+				*/
+				
 				String[] tempArr = tempStr.split(" ");
+				
+				/*
+				//testcode, print out/compare tempArr and person
+				System.out.println("tempArr: "); //tempArr start
+				System.out.println(tempArr[0]);
+				System.out.println(tempArr[1]);
+				System.out.println(tempArr[2]);
+				
+				System.out.println("person info: ");  //person info start
+				System.out.println(person.getName());
+				System.out.println(person.getHeight());
+				System.out.println(person.getWeight());
+				System.out.println(); //blank line for readability
+				*/
+				
 				double heightDoub = Double.parseDouble(tempArr[1]);
 				double weightDoub = Double.parseDouble(tempArr[2]);
 				if(tempArr[0].equals(person.getName()) 
