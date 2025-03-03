@@ -25,8 +25,10 @@ will need to implement the Comparable interface and implement a compareTo method
 You may also look up and modify a bubblesort or other sorting technique for solving this problem.
 */
 
+
 public class PersonOrderedSet extends PersonSet {
-	
+
+	//method adds Person objects to an aplabetical array list
 	@Override
 	public void add(Person person) { 
 		
@@ -34,8 +36,38 @@ public class PersonOrderedSet extends PersonSet {
 		super.add(person);
 		
 		//sort into alphabetical order
+		//create temp variables
+		String name1;
+		String name2;
 		
+		String tempName;
+		double tempHeight;
+		double tempWeight;
 		
+		//bubble sort
+		for(int j=0; j<personSet.size()-1; j++) {
+			for(int i=j+1; i<personSet.size(); i++) {
+				name1 = personSet.get(j).getName();
+				name2 = personSet.get(i).getName();
+				if(name1.compareToIgnoreCase(name2) > 0) {
+					
+					//set info from index j to temp variables
+					tempName = personSet.get(j).getName();
+					tempHeight = personSet.get(j).getHeight();
+					tempWeight = personSet.get(j).getWeight();
+					
+					//set index i info to index j
+					personSet.get(j).setName(personSet.get(i).getName());
+					personSet.get(j).setHeight(personSet.get(i).getHeight());
+					personSet.get(j).setWeight(personSet.get(i).getWeight());
+				
+					//set temp info to index i
+					personSet.get(i).setName(tempName);
+					personSet.get(i).setHeight(tempHeight);
+					personSet.get(i).setWeight(tempWeight);
+				}
+			}
+		}
 	}
 	
 	//toString method returns formatted array data with column headers

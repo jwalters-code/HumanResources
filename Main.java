@@ -33,7 +33,7 @@ DONE	Output the formatted data with header to two separate files named: hr_imper
 */
 
 /*
-TODO	Lastly, output the ordered data and the imperial data to the screen/console, nicely formatted in rows and labeled 
+DONE	Lastly, output the ordered data and the imperial data to the screen/console, nicely formatted in rows and labeled 
 columns (this nice formatting should already be in use if you wrote your toString methods well).
 */
 
@@ -82,19 +82,15 @@ public class Main
 		//test code, instantiate a test Person object
 		Person testPerson = new Person("Fabio", 191, 63);
 		
-		
 		//test code, check if duplicates are excluded
 		Person testPerson2 = new Person("Fabio", 191, 63);
 		Person testPerson3 = new Person("notFabio", 191, 63);
 		
-		
 		//test code, print testPerson
 		System.out.println(testPerson);
 		
-		
 		//instantiate a test PersonSet object
 		PersonSet testPersonSet = new PersonSet();
-		
 		
 		//test code, add test persons and print
 		testPersonSet.add(testPerson);
@@ -104,7 +100,6 @@ public class Main
 		System.out.println(testPersonSet.get(0));
 		System.out.println(testPersonSet.get(1));
 		
-		
 		System.out.println(); //blank line for readability
 		
 		//test code, check PersonSet toString method
@@ -112,7 +107,7 @@ public class Main
 		*/
 		
 		/*
-		TODO	Modify Main to 
+		DONE	Modify Main to 
 
 		DONE instantiate a PersonOrderedSet and a PersonImperialSet, instead of the PersonSet.
 		

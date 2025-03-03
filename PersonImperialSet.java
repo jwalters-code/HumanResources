@@ -30,6 +30,7 @@ public class PersonImperialSet extends PersonSet {
 	public void add(Person person) {
 	
 		/* convert height cm to inches & weight kg to pounds
+		 * cast to int to round to whole number so duplicate method will work
 		 * source: https://www.wikihow.com/Convert-Centimeters-to-Inches
 		 * source: https://www.wikihow.com/Convert-Kilograms-to-Pounds */
 		person.setHeight((int)(person.getHeight() * 0.394));

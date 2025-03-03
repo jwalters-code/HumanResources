@@ -1,6 +1,6 @@
 Name     Height (cm)         Weight (kg)
-Mario    155                          90
-Luigi    158                          83
 Bowser   310                         726
-Toad     41                            7
+Luigi    158                          83
+Mario    155                          90
 Peach    183                          60
+Toad     41                            7
