@@ -3,7 +3,7 @@ Jade Walters
 CSCI 2251
 Assignment: Human Resources
 Purpose: to practice creating classes and using inheritence
-Sources: I referenced some of my past assignments such as 
+Sources: --I referenced some of my past assignments such as 
 HurricaneRowData and TicTacToe
 --I watched a Coding with John tutorial about interfaces and abstract class
 source: https://www.youtube.com/watch?v=HvPlEJ3LHgE
@@ -16,34 +16,8 @@ source: https://www.geeksforgeeks.org/java-string-concat-examples/
 --Found formula for converting cm to inches and kg to pounds on WikiHow
 source: https://www.wikihow.com/Convert-Centimeters-to-Inches
 source: https://www.wikihow.com/Convert-Kilograms-to-Pounds
-*/
-
-/*
-Instructions for Part 2
-You need to write two new classes for part 2: PersonImperialSet and PersonOrderedSet.
-*/
-
-/*		
-DONE	I recommend adding methods to the classes to get the data in a text format for writing to file. You should think 
-about which class is most appropriate for this method (or methods) to be implemented in order to reduce code duplication.
-*/
-
-/*
-DONE	Output the formatted data with header to two separate files named: hr_imperial_set_output.txt and hr_ordered_set_output.txt
-*/
-
-/*
-DONE	Lastly, output the ordered data and the imperial data to the screen/console, nicely formatted in rows and labeled 
-columns (this nice formatting should already be in use if you wrote your toString methods well).
-*/
-
-/*
-TODO THIS! Objects are passed by reference, not by value. If you add the same Person to PersonOrderedSet and PersonImperialSet you will 
-see that the units get changed from metric to imperial in both. This is NOT what you want. One solution to this problem is to 
-instantiate two new Person objects and pass the same name, height, weight info to each, and then pass one to the imperial set 
-and the other to the ordered set. Another solution is to overload the Person constructor so that you can pass a Person type 
-variable to the constructor and the constructor will take care of copying the data. Both solutions require two separate 
-instantiations of Person in main.
+--I got help with bubble sort from GeeksforGeeks
+source: https://www.geeksforgeeks.org/sorting-strings-using-bubble-sort-2/
 */
 
 /*
@@ -106,15 +80,6 @@ public class Main
 		System.out.println(testPersonSet.toString());
 		*/
 		
-		/*
-		DONE	Modify Main to 
-
-		DONE instantiate a PersonOrderedSet and a PersonImperialSet, instead of the PersonSet.
-		
-		DONE Read in the data from the file, use it to populate both set objects with Persons, and then write out the data 
-		into two separate output files (one ordered and one imperial).
-		*/
-		
 		//instantiate a PersonOrderedSet and a PersonImperialSet
 		PersonOrderedSet orderedSet = new PersonOrderedSet();
 		PersonImperialSet imperialSet = new PersonImperialSet();
@@ -152,11 +117,11 @@ public class Main
 			System.exit(1);
 		}
 	
-		
 		//write orderedSet to file
 		try
 		{	
-			FileWriter fileWriterOrder = new FileWriter("hr_ordered_set_output.txt");
+			FileWriter fileWriterOrder = new FileWriter
+				("hr_ordered_set_output.txt");
 			fileWriterOrder.write(orderedSet.toString());
 			fileWriterOrder.close(); //close fileWriter
 		}
@@ -167,11 +132,11 @@ public class Main
 			System.exit(1);
 		}
 		
-		
 		//write imperialSet to file
 		try
 		{	
-			FileWriter fileWriterImperial = new FileWriter("hr_imperial_set_output.txt");
+			FileWriter fileWriterImperial = new FileWriter
+				("hr_imperial_set_output.txt");
 			fileWriterImperial.write(imperialSet.toString());
 			fileWriterImperial.close(); //close fileWriter
 		}
@@ -187,6 +152,5 @@ public class Main
 		
 		//print imperialSet
 		System.out.println(imperialSet.toString());
-
 	}
 }

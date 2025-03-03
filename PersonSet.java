@@ -3,7 +3,7 @@ Jade Walters
 CSCI 2251
 Assignment: Human Resources
 Purpose: to practice creating classes and using inheritence
-Sources: I referenced some of my past assignments such as 
+Sources: --I referenced some of my past assignments such as 
 HurricaneRowData and TicTacToe
 --I watched a Coding with John tutorial about interfaces and abstract class
 source: https://www.youtube.com/watch?v=HvPlEJ3LHgE
@@ -11,13 +11,13 @@ source: https://www.youtube.com/watch?v=HvPlEJ3LHgE
 source: https://www.geeksforgeeks.org/convert-string-to-double-in-java/
 --I got help on the toString method for array lists from PrepInsta
 source: https://prepinsta.com/java/arraylist-tostring-method/
-*/
-
-//2 TODOs
-
-/*
-DONE Neither PersonOrderedSet nor PersonImperialSet should contain duplicate data, but the code that takes care of such things 
-should be implemented in the add method of PersonSet.
+--I got help with string.concat from GeeksforGeeks
+source: https://www.geeksforgeeks.org/java-string-concat-examples/
+--Found formula for converting cm to inches and kg to pounds on WikiHow
+source: https://www.wikihow.com/Convert-Centimeters-to-Inches
+source: https://www.wikihow.com/Convert-Kilograms-to-Pounds
+--I got help with bubble sort from GeeksforGeeks
+source: https://www.geeksforgeeks.org/sorting-strings-using-bubble-sort-2/
 */
 
 import java.util.ArrayList;
@@ -45,15 +45,17 @@ public class PersonSet implements PersonList {
 		return personSet.get(index);
 	}
 	
-	//method checks for duplicate in personList 
-	//sources:
+	//method checks for duplicates in personList 
 	//https://www.geeksforgeeks.org/convert-string-to-double-in-java/
 	//https://prepinsta.com/java/arraylist-tostring-method/
 	public boolean duplicate(Person person, ArrayList<Person> personSet) {
 		if(personSet == null) {
 			
+			/*
 			//test code
 			System.out.println("null");
+			*/
+			
 			return false; //empty array
 		} else {
 			for(int i=0; i<personSet.size();  i++) {
@@ -92,23 +94,15 @@ public class PersonSet implements PersonList {
 		return false; //not duplicate
 	}
 	
-	/*
-	DONE Add a toString method to PersonSet that loops through the ArrayList, concatenating 
-	the Persons data to a String variable, which is then returned. The format needs to match the format of hr.txt.
-	--Name, left justified, 8 spaces total
-	--Height (cm), left justified, 15 spaces total
-	--Weight (kg), right justified, 15 spaces total
-	*/
-	
-	//toString method returns a string variable containing formatted personSet array data
+	//method returns a string variable containing formatted personSet data
 	@Override
 	public String toString() {
 		
 		//create String variable
 		String personSetStr = "";
 		
-		//Source: https://www.geeksforgeeks.org/java-string-concat-examples/
 		//add personSet array info to personSetStr
+		//https://www.geeksforgeeks.org/java-string-concat-examples/
 		for(int i=0; i<personSet.size(); i++) {
 			personSetStr = personSetStr.concat(String.format
 			("%-8s %-15.0f %15.0f\n", 

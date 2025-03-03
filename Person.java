@@ -3,7 +3,7 @@ Jade Walters
 CSCI 2251
 Assignment: Human Resources
 Purpose: to practice creating classes and using inheritence
-Sources: I referenced some of my past assignments such as 
+Sources: --I referenced some of my past assignments such as 
 HurricaneRowData and TicTacToe
 --I watched a Coding with John tutorial about interfaces and abstract class
 source: https://www.youtube.com/watch?v=HvPlEJ3LHgE
@@ -11,13 +11,13 @@ source: https://www.youtube.com/watch?v=HvPlEJ3LHgE
 source: https://www.geeksforgeeks.org/convert-string-to-double-in-java/
 --I got help on the toString method for array lists from PrepInsta
 source: https://prepinsta.com/java/arraylist-tostring-method/
-*/
-
-/*
-TODO You are strongly encouraged to use super.add(p) in PersonOrderedSet.add and then perform a sort of the data to make sure 
-everything is in order. You are allowed to use the built-in Collections.sort method, but in order to make it work, Person 
-will need to implement the Comparable interface and implement a compareTo method (You’re encouraged to look this up.). 
-You may also look up and modify a bubblesort or other sorting technique for solving this problem.
+--I got help with string.concat from GeeksforGeeks
+source: https://www.geeksforgeeks.org/java-string-concat-examples/
+--Found formula for converting cm to inches and kg to pounds on WikiHow
+source: https://www.wikihow.com/Convert-Centimeters-to-Inches
+source: https://www.wikihow.com/Convert-Kilograms-to-Pounds
+--I got help with bubble sort from GeeksforGeeks
+source: https://www.geeksforgeeks.org/sorting-strings-using-bubble-sort-2/
 */
 
 public class Person {

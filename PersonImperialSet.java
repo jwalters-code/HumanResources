@@ -3,7 +3,7 @@ Jade Walters
 CSCI 2251
 Assignment: Human Resources
 Purpose: to practice creating classes and using inheritence
-Sources: I referenced some of my past assignments such as 
+Sources: --I referenced some of my past assignments such as 
 HurricaneRowData and TicTacToe
 --I watched a Coding with John tutorial about interfaces and abstract class
 source: https://www.youtube.com/watch?v=HvPlEJ3LHgE
@@ -11,26 +11,23 @@ source: https://www.youtube.com/watch?v=HvPlEJ3LHgE
 source: https://www.geeksforgeeks.org/convert-string-to-double-in-java/
 --I got help on the toString method for array lists from PrepInsta
 source: https://prepinsta.com/java/arraylist-tostring-method/
-*/
-
-/*
-DONE	Write a class named, PersonImperialSet. This class should extend PersonSet and override the add method to 
-convert the height measurement from centimeters to inches and the weight from kilograms to pounds. (Look up the
- conversions online.)
- */
- 
- /*
- DONE You must use super.add(p) as the final step in PersonImperialSet.add after the conversion has been completed. (Assuming that 
-p is a variable referring to a Person object to be added to the set.)
+--I got help with string.concat from GeeksforGeeks
+source: https://www.geeksforgeeks.org/java-string-concat-examples/
+--Found formula for converting cm to inches and kg to pounds on WikiHow
+source: https://www.wikihow.com/Convert-Centimeters-to-Inches
+source: https://www.wikihow.com/Convert-Kilograms-to-Pounds
+--I got help with bubble sort from GeeksforGeeks
+source: https://www.geeksforgeeks.org/sorting-strings-using-bubble-sort-2/
 */
 
 public class PersonImperialSet extends PersonSet {
 	
+	//method converts metrics to Imperial and adds person object to array list
 	@Override
 	public void add(Person person) {
 	
 		/* convert height cm to inches & weight kg to pounds
-		 * cast to int to round to whole number so duplicate method will work
+		 * cast to int to round/truncate so duplicate method will work
 		 * source: https://www.wikihow.com/Convert-Centimeters-to-Inches
 		 * source: https://www.wikihow.com/Convert-Kilograms-to-Pounds */
 		person.setHeight((int)(person.getHeight() * 0.394));
