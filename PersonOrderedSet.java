@@ -35,9 +35,11 @@ public class PersonOrderedSet extends PersonSet {
 		String name1;  //for name comparison
 		String name2;
 		
+		/* UGH I WAS DOING TOO MUCH
 		String tempName;  //for temp storage
 		double tempHeight;
 		double tempWeight;
+		*/
 		
 		//bubble sort
 		for(int j=0; j<personSet.size()-1; j++) {
@@ -46,6 +48,7 @@ public class PersonOrderedSet extends PersonSet {
 				name2 = personSet.get(i).getName();
 				if(name1.compareToIgnoreCase(name2) > 0) {
 					
+					/*MESS
 					//set info from index j to temp variables
 					tempName = personSet.get(j).getName();
 					tempHeight = personSet.get(j).getHeight();
@@ -60,6 +63,20 @@ public class PersonOrderedSet extends PersonSet {
 					personSet.get(i).setName(tempName);
 					personSet.get(i).setHeight(tempHeight);
 					personSet.get(i).setWeight(tempWeight);
+					*/
+					
+					System.out.println("i: " + personSet.get(i));
+					System.out.println("j: " + personSet.get(j));
+					System.out.println();
+					
+					Person temp = personSet.get(i);
+					System.out.println("temp: " + temp);
+					personSet.set(i, personSet.get(j));
+					System.out.println("i: " + personSet.get(i));
+					personSet.set(j, temp);
+					System.out.println("j: " + personSet.get(j)); 
+					
+					System.out.println();
 				}
 			}
 		}
