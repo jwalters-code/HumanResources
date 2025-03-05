@@ -64,19 +64,12 @@ public class PersonOrderedSet extends PersonSet {
 					personSet.get(i).setHeight(tempHeight);
 					personSet.get(i).setWeight(tempWeight);
 					*/
-					
-					System.out.println("i: " + personSet.get(i));
-					System.out.println("j: " + personSet.get(j));
-					System.out.println();
-					
+			
+					//swap
+					//syntax is object.set(index to set, object to set it to)
 					Person temp = personSet.get(i);
-					System.out.println("temp: " + temp);
 					personSet.set(i, personSet.get(j));
-					System.out.println("i: " + personSet.get(i));
 					personSet.set(j, temp);
-					System.out.println("j: " + personSet.get(j)); 
-					
-					System.out.println();
 				}
 			}
 		}
