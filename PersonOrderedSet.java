@@ -48,7 +48,7 @@ public class PersonOrderedSet extends PersonSet {
 				name2 = personSet.get(i).getName();
 				if(name1.compareToIgnoreCase(name2) > 0) {
 					
-					/*MESS
+					/*MESS, swap entire object, not individual variables
 					//set info from index j to temp variables
 					tempName = personSet.get(j).getName();
 					tempHeight = personSet.get(j).getHeight();
